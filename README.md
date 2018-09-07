@@ -47,3 +47,19 @@ TestRubi[$IndependentTestFiles, "Independent"]
 saves the test results as the notebook `Rubi 4.16.0.4 Independent Integration Test Results.nb`.
 
 The arguments and effect of `TestMathematica` commands is the same as for `TestRubi`.
+
+The control variable `$PercentToTest` determines the percentage of problems to test in each file.
+For example, after making the assignment
+```mma
+$PercentToTest = 20
+```
+the `TestRubi` and `TestMathematica` commands will randomly select 20% of the problems to test in each file.
+Thus, reducing by a factor of 5 the time required to complete the test.
+The default value of `$PercentToTest` is 100.
+
+The control variable `$TimeOutLimit` determines the time limit in seconds allowed to integrate a problem.
+For example, the assignment
+```mma
+$TimeOutLimit = 200
+```
+increases the time limit to 200 seconds from the default value of 120 seconds.
