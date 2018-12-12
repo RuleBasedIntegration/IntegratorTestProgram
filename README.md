@@ -1,4 +1,4 @@
-              **D R A F T - Work in progress**
+> # D R A F T - Work in progress
 
 # Integrator Test Program
 ### A Mathematica program for testing Rubi and Mathematica's built-in integrator
@@ -9,6 +9,19 @@ It generates a notebook showing the problems on which the integrator being teste
 These test results can optionally be saved as a notebook file.
 Mathematica 7 or later is required to run the test program.
 
+The integrator test program uses test-cases that can be found in [MathematicaSyntaxTestSuite](https://github.com/RuleBasedIntegration/MathematicaSyntaxTestSuite).
+Each Mathematica file contains a set of test-problems which have the following form
+
+```mma
+{x^(5/2), x, 1, 2*x^(7/2)/7}
+```
+
+The elements of the list have the following meaning:
+
+1. Input expression
+2. Integration variable
+3. Number of steps necessary to solve the integration
+4. Optimal (or best known) antiderivative for the input expression
 
 ## Download and Install Integrator Test Program
 
